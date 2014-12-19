@@ -1,10 +1,23 @@
 Generator Prototype Angular
 ===========================
 
-## Initialize App
+A basic Angular App starting point for quickly building prototypes.
+
+- Angular
+- jQuery
+
+- Grunt build system
+
+- Bower dependency management
+
+## Run generator
 
 ```sh
-bower install
-npm install
+yo prototype
+```
+
+## After install, initialize App
+
+```sh
 grunt server
 ```

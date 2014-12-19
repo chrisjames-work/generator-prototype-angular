@@ -1,9 +1,2 @@
 node_modules
-npm-debug.log
-dist
-.tmp
-.sass-cache
-bower_components
-src/css
-src/scripts/components
 .DS_Store

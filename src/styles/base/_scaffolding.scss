@@ -20,24 +20,11 @@ html {
 body {
   background-color: $body-bg;
   color: $text-color;
-  @include fira-sans-regular;
+  @include source-sans-regular;
   @include font-size(1.2);
   line-height: 16px;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeLegibility;
-  @include transition(background-color 0.3s ease-in-out);
-
-  &.is-stop {
-    background-color: $stop;
-  }
-
-  &.is-wait {
-    background-color: $wait;
-  }
-
-  &.is-go {
-    background-color: $go;
-  }
 }
 
 
@@ -61,22 +48,6 @@ a {
 
 .link-underline {
   @include link-underline;
-}
-
-.btn {
-  border: 2px solid $white;
-  color: $white;
-  display: inline-block;
-  @include fira-sans-semibold;
-  @include font-size(1.1);
-  line-height: 36px;
-  padding: 0 30px;
-  text-transform: uppercase;
-
-  .no-touch &:hover,
-  &:focus {
-    color: $white;
-  }
 }
 
 /* Images

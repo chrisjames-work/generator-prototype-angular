@@ -10,10 +10,12 @@ define([
 
   // controller
   'controllers/core',
+  'controllers/home',
 
   // directives
   'directives/window',
   'directives/prevent-default',
+  'directives/header',
 
   // services
   'services/window',
@@ -23,17 +25,23 @@ define([
   // filters
   'filters/encode-uri',
 
+  // constants
+  'constants/resource-bundle',
+
   'angular',
-  'angular-route'
+  'angular-route',
+  'angular-local-storage'
 ], function (
   RouteConfig,
 
   // controllers
   CoreCtrl,
+  HomeCtrl,
 
   // directives
   WindowDirective,
   PreventDefaultDirective,
+  HeaderDirective,
 
   // services
   windowService,
@@ -43,58 +51,78 @@ define([
   // filters
   EncodeUriFilter,
 
+  // constants
+  ResourceBundle,
+
   angular
 ) {
   'use strict';
 
   angular.module('coreApp', [
-    'ngRoute'
+    'ngRoute',
+    'LocalStorageModule'
   ])
 
     // Set up routing
     .config(RouteConfig)
 
     /**
-     * Injects {@link lorax/controllers/CoreCtrl} as 'CoreCtrl'
-     * @method lorax/loraxApp~controller
+     * Injects {@link controllers/CoreCtrl} as 'CoreCtrl'
+     * @method coreApp~controller
      */
     .controller('CoreCtrl', CoreCtrl)
 
     /**
-     * Injects {@link lorax/directives/WindowDirective} as 'WindowDirective'
-     * @method lorax/loraxApp~directive
+     * Injects {@link controllers/HomeCtrl} as 'HomeCtrl'
+     * @method coreApp~controller
+     */
+    .controller('HomeCtrl', HomeCtrl)
+
+    /**
+     * Injects {@link directives/WindowDirective} as 'appWindow'
+     * @method coreApp~directive
      */
     .directive('appWindow', WindowDirective)
 
     /**
-     * Injects {@link lorax/directives/WindowDirective} as 'WindowDirective'
-     * @method lorax/loraxApp~directive
+     * Injects {@link directives/PreventDefaultDirective} as 'appPreventDefault'
+     * @method coreApp~directive
      */
     .directive('appPreventDefault', PreventDefaultDirective)
 
     /**
-     * Inject {@link lorax/services/windowService} as 'windowService'
-     * @method lorax/loraxApp~service
+     * Injects {@link directives/HeaderDirective} as 'appHeader'
+     * @method coreApp~directive
+     */
+    .directive('appHeader', HeaderDirective)
+
+    /**
+     * Inject {@link services/windowService} as 'windowService'
+     * @method coreApp~service
      */
     .service('windowService', windowService)
 
     /**
-     * Inject {@link lorax/services/utilsService} as 'utilsService'
-     * @method lorax/loraxApp~service
+     * Inject {@link services/utilsService} as 'utilsService'
+     * @method coreApp~service
      */
     .service('utilsService', utilsService)
 
     /**
-     * Inject {@link lorax/services/pubSubService} as 'pubSubService'
-     * @method lorax/loraxApp~factory
+     * Inject {@link services/pubSubService} as 'pubSubService'
+     * @method coreApp~factory
      */
     .factory('pubSubService', pubSubService)
 
     /**
      * Inject {@link lorax/services/encodeUriFilter} as 'encodeUri'
-     * @method lorax/loraxApp~filter
+     * @method coreApp~filter
      */
-    .filter('encodeUri', EncodeUriFilter);
+    .filter('encodeUri', EncodeUriFilter)
+
+    // For this simple implementation we can
+    // consider the resource bundle as a constant.
+    .constant('ResourceBundle', ResourceBundle);
 
   /**
    * Bootstrap the application

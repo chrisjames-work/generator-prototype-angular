@@ -1,33 +1,31 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Generator Prototype Angular</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <title>Generator Prototype Angular</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="shortcut icon" href="/favicon.ico">
 
-    <!-- styles -->
-    <link rel="stylesheet" href="/css/main.css">
+        <!-- styles -->
+        <link rel="stylesheet" href="/css/main.css">
 
-    <!-- build:js /scripts/lorax-head.min.js -->
-    <script src="/scripts/components/modernizr/modernizr.js"></script>
-    <script src="/scripts/grunticon.js"></script>
+        <!-- build:js /scripts/lorax-head.min.js -->
+        <script src="/scripts/components/modernizr/modernizr.js"></script>
+        <script src="/scripts/grunticon.js"></script>
+        <!-- endbuild -->
+    </head>
+
+    <body ng-controller="CoreCtrl" data-app-window>
+        <div data-app-header></div>
+
+        <div class="container" data-ng-view data-ng-cloak></div>
+
+        <footer role="contentinfo" class="footer">Footer</footer>
+    </body>
+
+    <!-- build:js /scripts/lorax.min.js -->
+    <script src="/scripts/components/requirejs/require.js"></script>
+    <script src="/scripts/config.js"></script>
     <!-- endbuild -->
-  </head>
-
-  <body ng-controller="CoreCtrl" data-app-window>
-    <header role="banner" class="banner">
-      <h1 class="banner__logo"><a href="/">Title</a></h1>
-    </header>
-
-    <div class="container" data-ng-view data-ng-cloak></div>
-
-    <footer role="contentinfo"></footer>
-  </body>
-
-  <!-- build:js /scripts/lorax.min.js -->
-  <script src="/scripts/components/requirejs/require.js"></script>
-  <script src="/scripts/config.js"></script>
-  <!-- endbuild -->
 </html>

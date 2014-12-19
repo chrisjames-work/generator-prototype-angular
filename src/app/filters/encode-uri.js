@@ -4,13 +4,13 @@
  * @class app/filters/EncodeUriFilter
  */
 define(function () {
-    'use strict';
+  'use strict';
 
-    var EncodeUriFilter = function ($window) {
-        return $window.encodeURIComponent;
-    };
+  var EncodeUriFilter = function ($window) {
+    return $window.encodeURIComponent;
+  };
 
-    EncodeUriFilter.$inject = ['$window'];
+  EncodeUriFilter.$inject = ['$window'];
 
-    return EncodeUriFilter;
+  return EncodeUriFilter;
 });

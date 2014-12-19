@@ -1,0 +1,11 @@
+<header role="banner">
+    <h1><a href="/">Generator Prototype Angular</a></h1>
+    <ul role="nav" class="cf">
+        <li ng-if="!header.isLoggedIn">
+            <a href="#" ng-click="header.login()">Login</a>
+        </li>
+        <li ng-if="header.isLoggedIn">
+            <a href="#" ng-click="header.logout()">Logout</a>
+        </li>
+    </ul>
+</header>

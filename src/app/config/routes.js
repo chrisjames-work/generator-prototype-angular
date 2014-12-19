@@ -14,17 +14,17 @@ define(function () {
 
     $routeProvider
 
-      /* --------- Home -------- */
+      /* -------------------- Pages -------------------- */
 
       .when('/', {
-        controller: 'CoreCtrl'
+        templateUrl: '/app/templates/home.tpl.html'
       })
 
       /* -------------------- Error -------------------- */
 
       .when('/error', {
         redirectTo: '/'
-        //templateUrl: '/app/lorax/templates/404.tpl.html'
+        //templateUrl: '/app/templates/404.tpl.html'
       });
 
   };

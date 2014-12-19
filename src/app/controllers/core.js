@@ -5,20 +5,24 @@
  * @param $scope
  */
 define(function () {
-    'use strict';
+  'use strict';
 
-    /*jshint unused: false */
-    var CoreCtrl = function (
-        $scope
-    ) {
-        this._$scope = $scope;
+  /*jshint unused: false */
+  var CoreCtrl = function (
+      $scope
+  ) {
+    this._$scope = $scope;
 
-        console.log('go');
+    $scope.core = {
+      test: true
     };
 
-    CoreCtrl.$inject = [
-        '$scope'
-    ];
+    console.log('init core controller');
+  };
 
-    return CoreCtrl;
+  CoreCtrl.$inject = [
+    '$scope'
+  ];
+
+  return CoreCtrl;
 });

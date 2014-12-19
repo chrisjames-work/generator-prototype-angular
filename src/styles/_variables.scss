@@ -12,12 +12,10 @@
 
 $black:                     #000;
 $white:                     #FFF;
-$neutral:                   #F4F2EF;
-$extra-dark-grey:           #222;
-
-$stop:                      #E11313;
-$wait:                      #FFCC00;
-$go:                        #00AE7B;
+$extra-light-grey:          #CCC;
+$medium-grey:               #999;
+$dark-grey:                 #666;
+$extra-dark-grey:           #333;
 
 
 /* z-index
@@ -28,7 +26,7 @@ $header-z-index:            1000;
 /* Scaffolding
    ========================================================================== */
 
-$body-bg:                   $neutral;
-$text-color:                $white;
+$body-bg:                   $white;
+$text-color:                $extra-dark-grey;
 
 $link-color:                $extra-dark-grey;
